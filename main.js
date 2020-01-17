@@ -1,29 +1,26 @@
 /*
-[ ] Create an addExcitement function 
-[ ] that should console.log() rows of words. 
-[ ] It should take an array containing the words of a sentence 
-[ ] and output them in the developer console.
+[x] Create an addExcitement function 
+[x] that should console.log() rows of words. 
+[x] It should take an array containing the words of a sentence 
+[x] and output them in the developer console.
 */
 
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
 /*
-    The addExcitement function should be an impure function, and accept
-    the array as the sole argument. It should iterate over the array
-    and output the words to the browser console.
+    [x] The addExcitement function should be an impure function, 
+    [x] and accept the array as the sole argument. 
+    [x] It should iterate over the array
+    [x] and output the words to the browser console.
 */
-function addExcitement (theWordArray) {
 
-    // Each time the for loop executes, you're going to add one more word to this string
-    let buildMeUp = ""
-
-    for (let i = 0; i < theWordArray.length; i++) {
-        // Concatenate the new word onto buildMeUp
-
-        // Print buildMeUp to the console
+function addExcitement (wordAry) {
+    let buildMeUp = "";
+    for (let i = 0; i < wordAry.length; i++) {
+        buildMeUp += wordAry[i] + " ";
+        console.log(buildMeUp);
     }
 
 }
 
-// Invoke the function and pass in the array
 addExcitement(sentence)
