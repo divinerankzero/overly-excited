@@ -3,15 +3,14 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 /*
 Add a new argument to the function 
 so that a developer can specify 
-which character should be displayed 
-instead of it always being an exclamation point.
+how many times the special character should be added.
 */
 
-function addExcitement (wordAry, punctuation) {
+function addExcitement (wordAry, punctuation, num) {
     let buildMeUp = "";
     for (let i = 0; i < wordAry.length; i++) {
         if ((i + 1) % 3 === 0) {
-            buildMeUp += `${wordAry[i]}${punctuation} `;
+            buildMeUp += `${wordAry[i]}${punctuation.repeat(num)} `;
         } else {
             buildMeUp += `${wordAry[i]} `;
         } 
@@ -19,4 +18,4 @@ function addExcitement (wordAry, punctuation) {
     }
 }
 
-addExcitement(sentence, "?")
+addExcitement(sentence, "*", 4);
